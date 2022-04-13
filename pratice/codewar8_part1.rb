@@ -1,7 +1,7 @@
 # 1.完成以下實作
 
 def count_by(x, n)
-  (x..x*n).select { |num| num % x == 0 }   
+  (x..x * n).select { |num| num % x == 0 }   
   # (1..n).map { |number| number * x } 
 end
 

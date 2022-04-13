@@ -11,7 +11,7 @@
 
 def bmi_calculator(height, weight)
   begin
-    weight / (height*height)
+    weight / ( height * height )
   rescue => exception
     "有問題"    
   end

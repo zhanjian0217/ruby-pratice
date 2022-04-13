@@ -1,35 +1,20 @@
-# 1.upto(9) do |n|
-#   if n % 2 == 1
-#     m = "*" * n
-#   end
-# end  
+a1 = "4D9709D699CA40EE"
+a2 = "5A4FEF83140C4E9E"
+b1 = "BC74301945134CB4"
+b2 = "961F67F8FCA44AB9"
 
-# 4.downto(0) do |x|
-#   z = " " * x
-# end
-
-
-# def tree (number)
-#   number.times do |n|
-#     stars = '*' * (2 * n + 1)
-#     spaces = ' ' * (number - n - 1)
-#     puts spaces + stars
-#   end
-# end
-
-# tree(5)
-
-5.times do |n|
-  puts "媽的智障 #{n}"
+def string_xor(str1: , str2: )
+  str1.chars.zip(str2.chars).map do |x, y|
+    (x.to_i(16) ^ y.to_i(16)).to_s(16).upcase
+  end.join
 end
 
+def hash_id(qq:, ww:, ee:, rr:) 
+  aa = string_xor(str1:qq , str2:ww )
+  bb = string_xor(str1: ee, str2:rr )
 
-def christmas_tree(number)
-  number.times do |x|
-    stars = '*' * (x * 2 + 1)
-    space = ' ' * (number - x + 1)
-    puts space + stars
-  end
+  "#{aa}#{bb}"
 end
 
-christmas_tree(5)
+# p hash_id(a1, a2, b1, b2)
+p hash_id(qq:a1, ww:a2, ee:b1 , rr:b2) 

@@ -74,4 +74,4 @@ p list.compact.uniq.sort
 p (1..100).select { |n| n.odd? }.sum
 
 
-
+p [*1..100].select { |n| n.odd? }.sum

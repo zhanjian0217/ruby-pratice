@@ -18,8 +18,6 @@ def calc_parking_fee(vehicle_type, parking_hour)
   fee = 0
   parking_hour = parking_hour.ceil
   # hr = parking_hour.ceil
-
-  
   if vehicle_type == :motocycle
     fee = 20
   elsif vehicle_type == :car
