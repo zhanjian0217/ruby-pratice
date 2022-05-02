@@ -53,15 +53,16 @@ puts true.!.!
 
 
 class Dog
+  attr_accessor :counter
   @@counter = 0
 
   def initialize
     @@counter += 1 
   end
 
-  def self.counter
-    return @@counter
-  end
+  # def self.counter
+  #   return @@counter
+  # end
 end
 
 5.times { Dog.new }
